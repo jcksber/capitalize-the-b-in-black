@@ -1,0 +1,369 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'MoristonPersonal-Regular';
+    src: url('/fonts/MoristonPersonal-Regular.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'MoristonPersonal-Bold';
+    src: url('/fonts/MoristonPersonal-Bold.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'MoristonPersonal-Black';
+    src: url('/fonts/MoristonPersonal-Black.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'MoristonPersonal-Light';
+    src: url('/fonts/MoristonPersonal-Light.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'MoristonPersonal-Medium';
+    src: url('/fonts/MoristonPersonal-Medium.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'MoristonPersonal-SemiBold';
+    src: url('/fonts/MoristonPersonal-SemiBold.otf') format('opentype');
+  }
+}
+
+@layer components {
+  .roadmap-card {
+    @apply rounded-xl bg-gray-roadmap-bg w-[250px] h-[250px] m-auto my-6 flex flex-col;
+  }
+  .roadmap-heading {
+    @apply bg-gray-roadmap-heading py-3 rounded-t-xl;
+  }
+  .roadmap-heading-text {
+    @apply text-xl text-yellow-main uppercase font-bold tracking-wide;
+  }
+  .roadmap-divider {
+    @apply w-full h-2 bg-gray-roadmap-divider rounded-b-full;
+  }
+  .roadmap-content {
+    max-width: 200px;
+    margin: auto auto;
+  }
+}
+
+.grid-seperator {
+  background: none;
+}
+
+.footer a {
+  color: yellow;
+}
+
+.dark-bg {
+  background-color: #131313;
+}
+
+.less-dark {
+  background-color: #111111;
+}
+
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(15, minmax(100px, 1fr));
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.hero-gradient {
+
+  /* ff 3.6+ */
+  background:-moz-radial-gradient(circle at 75% 75%, #FFFFFF 0%, #0055E5 25%, #042974 50%);
+
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-radial-gradient(circle at 75% 75%, #FFFFFF 0%, #0055E5 25%, #042974 50%);
+
+  /* opera 11.10+ */
+  background:-o-radial-gradient(circle at 75% 75%, #FFFFFF 0%, #0055E5 25%, #042974 50%);
+
+  /* ie 10+ */
+  background:-ms-radial-gradient(circle at 75% 75%, #FFFFFF 0%, #0055E5 25%, #042974 50%);
+
+  /* global 92%+ browsers support */
+  background:radial-gradient(circle at 75% 75%, #FFFFFF 0%, #0055E5 25%, #042974 50%);
+}
+
+@media (min-width: 768px) {
+  .roadmap {
+    overflow-x: unset;
+    overflow-y: unset;
+    white-space: unset;
+    grid-template-columns: repeat(15, minmax(0, 1fr));
+  }
+  .grid-seperator {
+    background: linear-gradient(#fff, #fff) center/2px 100% no-repeat;
+  }
+
+  .hero-gradient {
+
+    /* ff 3.6+ */
+    background:-moz-radial-gradient(circle at 76% 40%, #FFFFFF 0%, #0055E5 30%, #042974 60%);
+  
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 76% 40%, #FFFFFF 0%, #0055E5 30%, #042974 60%);
+  
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 76% 40%, #FFFFFF 0%, #0055E5 30%, #042974 60%);
+  
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 76% 40%, #FFFFFF 0%, #0055E5 30%, #042974 60%);
+  
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 76% 40%, #FFFFFF 0%, #0055E5 30%, #042974 60%);
+  }
+}
+
+.roadmap p {
+  white-space: pre-wrap;
+}
+
+.roadmap-bg {
+  background-image: url("/public/talk_bg");
+}
+
+.bg-div {
+  position: relative;
+}
+
+.bg-div img {
+  display: block;
+  width: 100%;
+  max-width: 1200px; /* corresponds to max height of 450px */
+  margin: 0 auto;
+}
+
+.bg-div .image-text-content {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+}
+
+.top-shift {
+  top: 40%;
+}
+
+.clip {
+  clip-path: ellipse(50px 60px at 0 10% 20%);
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.roadmap-grid {
+  grid-template-columns: 175px 175px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+/** JACK'S CSS **/
+
+.hero-bg-container {
+  margin: 0;
+  padding: 0;
+  top: 20px;
+}
+
+.hero-text-container {
+  padding-top: 5rem;
+}
+
+@media screen and (min-width: 754px) and (max-width: 1080px) {
+  .hero-text-container {
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+  }
+  .hero-text-container h1 {
+    font-size: 1.2rem;
+  }
+  .hero-text-container .tracking-juice {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  .hero-text-container .tracking-light {
+    font-size: 1rem;
+  }
+}
+
+.hero-separator {
+  background-color: white;
+  width: 100%;
+  height: 20px;
+}
+
+.mint-section {
+  background-color: rgb(210,233,243);
+}
+
+.mint-section p {
+  letter-spacing: 6px;
+}
+
+#section_text_1 {
+  margin-top: 0;
+  padding-top: 1.5em !important;
+  font-size: 1.65rem !important;
+}
+
+#section_text_2 {
+  font-size: 1.65rem !important;
+}
+
+#section_text_3 {
+  letter-spacing: 12px;
+}
+
+.text-dark-blue {
+  color: rgb(7,46,122);
+}
+.bg-dark-blue {
+  background-color: rgb(7,46,122);
+}
+
+.text-gray-blue {
+  color: rgb(74,98,140);
+}
+.bg-gray-blue {
+  background-color: rgb(74,98,140);
+}
+
+#mint_button_container {
+  width: 100%;
+  background-color: rgb(210,233,243);
+}
+
+.btn-container {
+  width: 240px;
+  margin: 0 auto;
+}
+
+.btn.juice-btn {
+  border-radius: 0px;
+  height: 2.8em !important;
+  width: 100%;
+  font-weight: 100;
+  /* letter-spacing: 2px; */
+  background-color: rgb(15,56,144);
+}
+
+hr.btn-light-yellow-bar,
+hr.btn-yellow-bar,
+hr.btn-orange-bar,
+hr.btn-red-bar,
+hr.btn-pink-bar {
+  width: 100%;
+  height: 3px;
+  border: none;
+  padding: 0;
+}
+/*orange: 215, 105, 42
+ *red: 188, 28, 13
+ *pink: 226, 189, 190
+*/
+hr.btn-light-yellow-bar {
+  background-color: rgb(218, 210, 93);
+}
+hr.btn-yellow-bar {
+  background-color: rgb(237,200,78);
+}
+hr.btn-orange-bar {
+  background-color: rgb(215,105,42);
+}
+hr.btn-red-bar {
+  background-color: rgb(190,27,13);
+}
+hr.btn-pink-bar {
+  background-color: rgb(226,189,190);
+}
+
+/* New Bodega Hero styles */
+
+.bgWrap {
+  position: static;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bgText {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  padding-top: 40vh;
+  text-shadow: 1px 1px 1px #3c5c5e;
+}
+
+/* #bodega-desktop-content {
+  display: grid;
+
+} */
+
+
+
+/* RSVP styles */
+
+.rsvp {
+  background: white;
+}
+
+.rsvp .drive-in-gif {
+  padding-top: 3%;
+  height:  683px;
+  width:  585px;
+  margin: 0 auto;
+}
+
+.rsvp .content-window {
+  background: white;
+  height: 550px;
+}
+
+.rsvp .content-window .not-allowed {
+  height: 100%;
+}
+
+.rsvp .content-window .rsvp-event-brite iframe {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.rsvp .content-window .not-allowed p {
+  color: black;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 5%;
+}
+
+@media screen and (max-width: 900px) {
+  .rsvp .drive-in-gif {
+    padding-top: 10%;
+    height:  525px;
+    width:  450px;
+  }
+}
+
+
+
+
+/*.connect-button {
+  height="683px"
+                  width="585px"
+  text-align: center;
+  padding-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}*/
