@@ -16,21 +16,20 @@
     "@heroicons/react": "^1.0.4",
     "@usedapp/core": "latest",
     "@web3-react/core": "^6.1.9",
+    "autoprefixer": "^10.4.0",
     "bn.js": "^5.2.0",
     "daisyui": "^1.14.0",
     "dotenv": "^10.0.0",
     "ethers": "^5.4.7",
     "next": "latest",
     "next-images": "^1.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "next-videos": "1.5.0",
+    "postcss": "^8.4.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-hover-video-player": "^9.4.0",
     "react-toastify": "^8.1.0",
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.5",
     "tailwindcss": "^3.0.7"
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }

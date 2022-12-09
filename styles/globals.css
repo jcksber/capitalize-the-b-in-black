@@ -307,41 +307,49 @@ hr.btn-pink-bar {
   text-shadow: 1px 1px 1px #3c5c5e;
 }
 
-/* #bodega-desktop-content {
-  display: grid;
-
-} */
-
 
 
 /* RSVP styles */
 
-.rsvp {
+#bomber-page {
   background: white;
+  height: 1040px;
 }
 
-.rsvp .drive-in-gif {
-  padding-top: 3%;
-  height:  683px;
+/* #bomber-page nav {
+  height: 190px;
+} */
+
+#bomber-page #connect-img {
+  padding-top: 1%;
   width:  585px;
   margin: 0 auto;
 }
-
-.rsvp .content-window {
-  background: white;
-  height: 550px;
+#bomber-page #connect-img:hover {
+  cursor: pointer;
 }
 
-.rsvp .content-window .not-allowed {
+#bomber-page .content-window {
+  background: white;
+  height: 1040px;
+}
+
+#bomber-page .content-window .not-allowed {
   height: 100%;
 }
 
-.rsvp .content-window .rsvp-event-brite iframe {
-  margin: 0 auto;
-  padding-top: 20px;
+#bomber-page .content-window .rsvp-event-brite {
+  margin-top: 160px;
 }
 
-.rsvp .content-window .not-allowed p {
+#bomber-page .content-window .rsvp-event-brite iframe {
+  margin: 0 auto;
+}
+#bomber-page .content-window .rsvp-event-brite iframe:focus-visible {
+  outline: solid 1px red;
+}
+
+#bomber-page .content-window .not-allowed p {
   color: black;
   font-size: 2em;
   text-align: center;
@@ -349,21 +357,16 @@ hr.btn-pink-bar {
 }
 
 @media screen and (max-width: 900px) {
-  .rsvp .drive-in-gif {
+  #bomber-page #connect-img {
     padding-top: 10%;
-    height:  525px;
     width:  450px;
   }
 }
 
+/* PANTHER BOMBER STYLES */
 
-
-
-/*.connect-button {
-  height="683px"
-                  width="585px"
-  text-align: center;
-  padding-top: 10%;
-  margin-left: auto;
-  margin-right: auto;
-}*/
+#panther {
+  position: absolute;
+  left: calc(50% - 75px);
+  top: 40px;
+}

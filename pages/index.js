@@ -1,11 +1,15 @@
 import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link';
+
 import productAbi from '../utils/product_abi.json'
 
-import Image from 'next/image'
-import hodlerOnlyGif from '../public/drivein_theatre_sorryplugonly.gif'
-import connectGif from '../public/drivein_theatre_connectwallet.gif'
+import connectImg from '../public/jackclaim.png'
+import logik from '../public/logiklogo.png'
+import panther from '../public/RBK_pantherlogo_patch.png'
+
 import { useState, useEffect } from 'react'
-import { useGasPrice, useEthers } from '@usedapp/core'
+import { shortenAddress, useEthers } from '@usedapp/core'
 import { ethers, utils } from 'ethers'
 
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -70,34 +74,52 @@ export default function Home() {
 	}, [account]);
 
 	return(
-		<div className="rsvp h-screen w-full">
+		<div id="bomber-page" className="w-full">
 			<Head>
 				<title>Capitalize the B in Black</title>
 			</Head>
+			<nav className='bg-white z-30'>
+				<div className="navbar bg-white text-black">
+					<div className="px-2 md:mx-2 navbar-start w-1/3 md:w-1/2">
+					</div>
+					<div id="panther" className="px-2 mx-2 navbar-center lg:flex">
+						<div className="flex items-stretch">
+							<Link href="/">
+								<img src={panther.src} quality={100} width={150} height={150} className=""/>
+							</Link>
+						</div>
+					</div>
+					<div className="navbar-end">
+						<button className="border-solid border-2 border-gray-500 text-black pl-8 ml-auto md:pl-16 py-1 pr-2 rounded-md hover:bg-yellow-main" onClick={() => activateBrowserWallet()} >
+								{account ? shortenAddress(account) : (<span>connect 🦊</span>)}
+						</button>
+					</div>
+				</div>
+			</nav>
 			<div className="content-window">
 				{account ? (
-					products > 0 ? (
+					products == 0 ? (
 						<div className="rsvp-event-brite">
-							<iframe src="google form" height="720px" width="500px">
+							<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQsqxTot2m5B6JwnJBk_oXf1hIoSFmVd-e79nqTT2Xs0Lyig/viewform?usp=sf_link" height="720px" width="500px" frameborder="0" marginheight="0" marginwidth="0">
+								Loading...
 							</iframe>
 						</div>
 					) : (
 						<div className="not-allowed">
 							<div className="drive-in-gif">
-								<Image 
-									src={hodlerOnlyGif} 
-								/>
+								{/* <video src={require('../public/capitalize_the_b_Blackk.mp4')} /> */}
 							</div>
 						</div>
 					)	
 				) : (
-					<div className="not-allowed">
-						<div className="drive-in-gif">
-							<Image 
-								src={connectGif} 
+					<a onClick={() => activateBrowserWallet()}>
+						<div id="connect-img">
+							<img
+								src={connectImg.src}
+								alt="Photo collage of bomber jacket shots" 
 							/>
 						</div>
-					</div>
+					</a>
 				)}
 			</div>
 		</div>

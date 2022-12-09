@@ -27,30 +27,6 @@ export const Navbar = ({ children }) => {
     return (
         <nav className='bg-white z-30'>
             <div className="navbar bg-white text-black">
-                <div className="px-2 md:mx-2 navbar-start w-1/3 md:w-1/2">
-                    <div className="hidden items-center md:flex">
-                        <div className="hidden mr-6 md:block">
-                            <a href="https://discord.com/invite/S9nue2Sm6a" className="hidden md:block">
-                                <FontAwesomeIcon icon={faDiscord} size="2x" className='text-black hover:text-yellow-main hidden md:block' />
-                            </a>
-                        </div>
-                        <div className="hidden mr-6 md:block">
-                            <a href="https://twitter.com/JulianGilliam" className="hidden md:block">
-                                <FontAwesomeIcon icon={faTwitter} size="2x" className='text-black hover:text-yellow-main hidden md:block' />
-                            </a>
-                        </div>
-                        <div className="hidden mr-6 md:block">
-                            <a href="https://www.instagram.com/juliangilliam/" className="hidden md:block">
-                                <FontAwesomeIcon icon={faInstagramSquare} size="2x" className='text-black hover:text-yellow-main hidden md:block' />
-                            </a>
-                        </div>
-                        <div className="hidden mr-6 md:block">
-                            <a href="https://opensea.io/collection/product-of-america" className="hidden md:block">
-                                <Opensea className="hidden md:block" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 <div className="px-2 mx-2 navbar-center lg:flex">
                     <div className="flex items-stretch">
                         <Link href="/">
