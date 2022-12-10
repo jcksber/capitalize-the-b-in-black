@@ -334,18 +334,14 @@ hr.btn-pink-bar {
   height: 1040px;
 }
 
-#bomber-page .content-window .not-allowed {
-  height: 100%;
-}
-
-#bomber-page .content-window .rsvp-event-brite {
+#bomber-page .content-window #bomber-signup {
   margin-top: 160px;
 }
 
-#bomber-page .content-window .rsvp-event-brite iframe {
+#bomber-page .content-window #bomber-signup iframe {
   margin: 0 auto;
 }
-#bomber-page .content-window .rsvp-event-brite iframe:focus-visible {
+#bomber-page .content-window #bomber-signup iframe:focus-visible {
   outline: solid 1px red;
 }
 
@@ -369,4 +365,29 @@ hr.btn-pink-bar {
   position: absolute;
   left: calc(50% - 75px);
   top: 40px;
+}
+
+#capitalize-video {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 180px;
+}
+
+@media screen and (max-width: 500px) {
+  nav .navbar-end {
+    right: 10px;
+    position: absolute;
+  }
+  #panther {
+    top: 80px;
+  }
+
+  #bomber-signup iframe {
+    width: 400px !important;
+    margin-left: auto; margin-right: auto;
+  }
+
+  #capitalize-video {
+    width: 400px;
+  }
 }

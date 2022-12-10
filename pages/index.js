@@ -82,7 +82,7 @@ export default function Home() {
 				<div className="navbar bg-white text-black">
 					<div className="px-2 md:mx-2 navbar-start w-1/3 md:w-1/2">
 					</div>
-					<div id="panther" className="px-2 mx-2 navbar-center lg:flex">
+					<div id="panther" className="navbar-center lg:flex">
 						<div className="flex items-stretch">
 							<Link href="/">
 								<img src={panther.src} quality={100} width={150} height={150} className=""/>
@@ -98,16 +98,16 @@ export default function Home() {
 			</nav>
 			<div className="content-window">
 				{account ? (
-					products == 0 ? (
-						<div className="rsvp-event-brite">
+					products > 0 ? (
+						<div id="bomber-signup">
 							<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQsqxTot2m5B6JwnJBk_oXf1hIoSFmVd-e79nqTT2Xs0Lyig/viewform?usp=sf_link" height="720px" width="500px" frameborder="0" marginheight="0" marginwidth="0">
 								Loading...
 							</iframe>
 						</div>
 					) : (
 						<div className="not-allowed">
-							<div className="drive-in-gif">
-								{/* <video src={require('../public/capitalize_the_b_Blackk.mp4')} /> */}
+							<div id="capitalize-video">
+								<video autoPlay src={require('../public/capitalize_the_b_Blackk.mp4')} width={500} />
 							</div>
 						</div>
 					)	
